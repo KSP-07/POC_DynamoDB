@@ -22,6 +22,7 @@ async function queryCursor(){
                 console.log("No items found for the specified MovieId.");
             }
             params.ExclusiveStartKey = data.LastEvaluatedKey;
+            console.log('--------',typeof data.LastEvaluatedKey);
         } catch (err) {
             console.log("Error querying data:", err);
         }
